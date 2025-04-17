@@ -18,19 +18,17 @@ const Index = () => {
       </header>
       
       {/* Main Content */}
-      <main className="flex-grow flex flex-col items-center justify-center relative z-10">
-        <div className="text-center space-y-8">
-          {/* Centered Logo */}
-          <Logo jumping size="large" className="mx-auto" />
-          
-          {/* Main Title */}
-          <h1 className="text-5xl font-bold tracking-wider animate-pulse-scale text-shadow-glow">snowy.ai</h1>
-          
-          {/* Subtitle */}
-          <p className="text-xl max-w-lg mx-auto opacity-90 px-4 text-shadow-sm">
-            A powerful discord bot maker with no code powered by <a href="https://discord.gg/swoosh" className="text-blue-400 hover:text-blue-300 font-medium">.gg/swoosh</a>
-          </p>
-        </div>
+      <main className="flex-grow flex flex-col items-center justify-center relative z-10 space-y-8">
+        {/* Centered Logo */}
+        <Logo jumping size="large" className="mx-auto" />
+        
+        {/* Main Title */}
+        <h1 className="text-5xl font-bold tracking-wider animate-pulse-scale text-shadow-glow">snowy.ai</h1>
+        
+        {/* Subtitle */}
+        <p className="text-xl max-w-lg mx-auto text-center opacity-90 px-4 text-shadow-sm">
+          A powerful discord bot maker with no code powered by <a href="https://discord.gg/swoosh" className="text-blue-400 hover:text-blue-300 font-medium">.gg/swoosh</a>
+        </p>
       </main>
     </div>
   );
