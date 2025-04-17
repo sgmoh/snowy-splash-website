@@ -2,6 +2,8 @@
 import React from 'react';
 import SnowAnimation from '@/components/SnowAnimation';
 import Logo from '@/components/Logo';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -29,6 +31,24 @@ const Index = () => {
         <p className="text-xl max-w-lg mx-auto text-center opacity-90 px-4 text-shadow-sm">
           A powerful discord bot maker with no code powered by <a href="https://discord.gg/swoosh" className="text-blue-400 hover:text-blue-300 font-medium">.gg/swoosh</a>
         </p>
+        
+        {/* Action Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
+          <Button 
+            variant="default" 
+            className="bg-blue-600 hover:bg-blue-700"
+            onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
+          >
+            <MessageCircle className="mr-2" /> Join support server
+          </Button>
+          <Button 
+            variant="outline" 
+            className="border-white text-white hover:bg-white hover:text-black"
+            onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
+          >
+            Make yours now <ArrowRight className="ml-2" />
+          </Button>
+        </div>
       </main>
     </div>
   );
