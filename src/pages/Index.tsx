@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SnowAnimation from '@/components/SnowAnimation';
 import Logo from '@/components/Logo';
@@ -8,10 +7,8 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 const Index = () => {
   return (
     <div className="min-h-screen w-full bg-black text-white flex flex-col">
-      {/* Snow animation */}
       <SnowAnimation />
       
-      {/* Top Navigation */}
       <header className="relative z-10 p-4">
         <a href="/" className="flex items-center group">
           <Logo className="transition-transform duration-300 group-hover:scale-110" />
@@ -19,24 +16,19 @@ const Index = () => {
         </a>
       </header>
       
-      {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center relative z-10 space-y-8">
-        {/* Centered Logo */}
         <Logo jumping size="large" className="mx-auto" />
         
-        {/* Main Title */}
         <h1 className="text-5xl font-bold tracking-wider animate-pulse-scale text-shadow-glow">snowy.ai</h1>
         
-        {/* Subtitle */}
         <p className="text-xl max-w-lg mx-auto text-center opacity-90 px-4 text-shadow-sm">
           A powerful discord bot maker with no code powered by <a href="https://discord.gg/swoosh" className="text-blue-400 hover:text-blue-300 font-medium">.gg/swoosh</a>
         </p>
         
-        {/* Action Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-4">
           <Button 
             variant="default" 
-            className="bg-blue-600 hover:bg-blue-700"
+            className="bg-white text-black hover:bg-gray-200"
             onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
           >
             <MessageCircle className="mr-2" /> Join support server
