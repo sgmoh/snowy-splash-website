@@ -1,12 +1,24 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '@/components/Logo';
 import SnowAnimation from '@/components/SnowAnimation';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // For demo purposes only - in production this should use Supabase auth
+    if (email === 'test@example.com' && password === 'password123') {
+      navigate('/dashboard');
+    }
+  };
+
   return (
     <div className="min-h-screen w-full bg-black text-white flex flex-col">
       <SnowAnimation />
@@ -22,12 +34,14 @@ const Login = () => {
         <div className="w-full max-w-md bg-black bg-opacity-70 p-8 rounded-lg border border-white">
           <h1 className="text-3xl font-bold mb-8 text-center">Login to snowy.ai</h1>
           
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium">Email</label>
               <input
                 type="email"
                 id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-2 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-white"
                 placeholder="your@email.com"
               />
@@ -38,9 +52,18 @@ const Login = () => {
               <input
                 type="password"
                 id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-2 bg-black border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-white"
                 placeholder="••••••••"
               />
+            </div>
+
+            {/* Test account info */}
+            <div className="text-sm text-gray-400 bg-white/5 p-3 rounded">
+              <p>Test Account:</p>
+              <p>Email: test@example.com</p>
+              <p>Password: password123</p>
             </div>
             
             <Button 
