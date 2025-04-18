@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SnowAnimation from '@/components/SnowAnimation';
 import Logo from '@/components/Logo';
@@ -28,14 +29,14 @@ const Index = () => {
         <div className="flex flex-wrap justify-center gap-4 mt-4">
           <Button 
             variant="default" 
-            className="bg-white text-black hover:bg-gray-200"
+            className="bg-black text-white border border-white hover:bg-gray-900"
             onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
           >
             <MessageCircle className="mr-2" /> Join support server
           </Button>
           <Button 
             variant="outline" 
-            className="border-white text-white hover:bg-white hover:text-black"
+            className="bg-black text-white border-white hover:bg-gray-900"
             onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
           >
             Make yours now <ArrowRight className="ml-2" />
