@@ -4,8 +4,11 @@ import SnowAnimation from '@/components/SnowAnimation';
 import Logo from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MessageCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full bg-black text-white flex flex-col">
       <SnowAnimation />
@@ -37,7 +40,7 @@ const Index = () => {
           <Button 
             variant="default" 
             className="bg-black text-white border border-white hover:bg-gray-900"
-            onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
+            onClick={() => navigate('/login')}
           >
             Make yours now <ArrowRight className="ml-2" />
           </Button>
