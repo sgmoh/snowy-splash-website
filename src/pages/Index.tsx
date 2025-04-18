@@ -35,8 +35,8 @@ const Index = () => {
             <MessageCircle className="mr-2" /> Join support server
           </Button>
           <Button 
-            variant="outline" 
-            className="bg-black text-white border-white hover:bg-gray-900"
+            variant="default" 
+            className="bg-black text-white border border-white hover:bg-gray-900"
             onClick={() => window.open('https://discord.gg/swoosh', '_blank')}
           >
             Make yours now <ArrowRight className="ml-2" />
